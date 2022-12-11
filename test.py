@@ -1,6 +1,7 @@
 import unittest
 
 import day01
+import day02
 
 
 class TestDay01(unittest.TestCase):
@@ -27,3 +28,18 @@ class TestDay01(unittest.TestCase):
     def test_part2(self):
         for text, result in zip(self.text_part2_list, self.result_part2_list):
             self.assertEqual(day01.part2(text), result)
+
+
+class TestDay02(unittest.TestCase):
+    def setUp(self):
+        self.text_list = ["2x3x4", "1x1x10"]
+        self.result_part1_list = [58, 43]
+        self.result_part2_list = [34, 14]
+
+    def test_part1(self):
+        for text, result in zip(self.text_list, self.result_part1_list):
+            self.assertEqual(day02.part1(text), result)
+
+    def test_part2(self):
+        for text, result in zip(self.text_list, self.result_part2_list):
+            self.assertEqual(day02.part2(text), result)
