@@ -4,6 +4,7 @@ import day01
 import day02
 import day03
 import day04
+import day05
 
 
 class TestDay01(unittest.TestCase):
@@ -71,3 +72,18 @@ class TestDay04(unittest.TestCase):
     def test_part1(self):
         for text, result in zip(self.text_list, self.result_list):
             self.assertEqual(day04.part1(text), result)
+
+
+class TestDay05(unittest.TestCase):
+    def test_part1(self):
+        self.assertTrue(day05.is_nice_part1("ugknbfddgicrmopn"))
+        self.assertTrue(day05.is_nice_part1("aaa"))
+        self.assertFalse(day05.is_nice_part1("jchzalrnumimnmhp"))
+        self.assertFalse(day05.is_nice_part1("haegwjzuvuyypxyu"))
+        self.assertFalse(day05.is_nice_part1("dvszwmarrgswjxmb"))
+
+    def test_part2(self):
+        self.assertTrue(day05.is_nice_part2("qjhvhtzxzqqjkmpb"))
+        self.assertTrue(day05.is_nice_part2("xxyxx"))
+        self.assertFalse(day05.is_nice_part2("uurcxstgmygtbstg"))
+        self.assertFalse(day05.is_nice_part2("ieodomkazucvgmuy"))
