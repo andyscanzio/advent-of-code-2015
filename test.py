@@ -3,6 +3,7 @@ import unittest
 import day01
 import day02
 import day03
+import day04
 
 
 class TestDay01(unittest.TestCase):
@@ -60,3 +61,13 @@ class TestDay03(unittest.TestCase):
     def test_part2(self):
         for text, result in zip(self.text_part2_list, self.result_part2_list):
             self.assertEqual(day03.part2(text), result)
+
+
+class TestDay04(unittest.TestCase):
+    def setUp(self):
+        self.text_list = ["abcdef", "pqrstuv"]
+        self.result_list = [609043, 1048970]
+
+    def test_part1(self):
+        for text, result in zip(self.text_list, self.result_list):
+            self.assertEqual(day04.part1(text), result)
